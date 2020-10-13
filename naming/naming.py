@@ -47,8 +47,8 @@ class NamingServer:
 		for i in range(len(self._storages)):
 			if self._ready[i] == True:
 				available.append(self._storages[i])
-		# ip = available[0]
-		ip = "10.0.15.10"
+		ip = available[0]
+		#ip = "10.0.15.10"
 		with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
 			sock.connect((addr, port))
 			sock.send(ip.encode())
